@@ -398,6 +398,7 @@ class LLM:
             prompts: The prompts to the LLM. You may pass a sequence of prompts
                 for batch inference. See [PromptType][vllm.inputs.PromptType]
                 for more details about the format of each prompts.
+                指的是一条或多条要提供给大语言模型（LLM）的输入文本（或对应的已分词序列），用来让模型根据提示内容来生成相应的输出。
             sampling_params: The sampling parameters for text generation. If
                 None, we use the default sampling parameters.
                 When it is a single value, it is applied to every prompt.

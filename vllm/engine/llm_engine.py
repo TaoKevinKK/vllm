@@ -238,6 +238,9 @@ class LLMEngine:
         self.log_stats = log_stats
         self.use_cached_outputs = use_cached_outputs
 
+        # tokenizer 是输入/输出文本和模型内部使用的向量或者整数索引之间的转换.
+        # 例如, 输入文本 "Hello, world!" 会被转换为整数索引, 然后输入到模型中.
+        # 模型输出整数索引, 然后通过 detokenizer 转换回文本.
         if not self.model_config.skip_tokenizer_init:
             self.tokenizer = self._init_tokenizer()
             self.detokenizer = Detokenizer(self.tokenizer)
